@@ -71,3 +71,23 @@ print scores
 # mean
 from numpy import mean
 print mean(scores)
+# k-mean clustering
+from sklearn.cluster import KMeans
+kmeans = KMeans(n_clusters=3,init='random')#initialization
+kmeans.fit(data)# actual execution
+c = kmeans.predict(data)
+# completeness and homogeneity score
+from sklearn.metrics import completeness_score,homogeneity_score
+print completeness_score(t,c)
+print homogeneity_score(t,c)
+# visualization it
+figure()
+subplot(211) # top figure with the real classes
+plot(data[t==1,0],data[t==1,2],'bo')
+plot(data[t==2,0],data[t==2,2],'ro')
+plot(data[t==3,0],data[t==3,2],'go')
+subplot(212) # bottom figure with classes assigned automatically
+plot(data[t==1,0],data[t==1,2],'bo',alpha=.7)
+plot(data[t==2,0],data[t==2,2],'go',alpha=.7)
+plot(data[t==0,0],data[t==0,2],'mo',alpha=.7)
+show()
