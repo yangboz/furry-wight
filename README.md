@@ -28,6 +28,3 @@ correlation measures
 and visualize the information it brings
 
 • Analyze structured data
-
-Each topic will be covered by code examples based on four of the
-major Python libraries for data anal
