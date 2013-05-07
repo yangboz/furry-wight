@@ -63,3 +63,11 @@ print confusion_matrix(classifier.predict(test),t_test)
 # fusion matrix report
 from sklearn.metrics import classification_report
 print classification_report(classifier.predict(test),t_test,target_names=['setos','versicolor','virginica'])
+# cross validation
+from sklearn.cross_validation import cross_val_score
+# cross validation with 6 iterations
+scores = cross_val_score(classifier,data,t,cv=6)
+print scores
+# mean
+from numpy import mean
+print mean(scores)
