@@ -91,3 +91,19 @@ plot(data[t==1,0],data[t==1,2],'bo',alpha=.7)
 plot(data[t==2,0],data[t==2,2],'go',alpha=.7)
 plot(data[t==0,0],data[t==0,2],'mo',alpha=.7)
 show()
+# Regression
+from numpy.random import rand
+x = rand(40,1) # explanatory variable
+y = x*x*x + rand(40,1)/5 # depentend variable
+# best-fit line regression
+from sklearn.linear_model import LinearRegression
+linreg = LinearRegression()
+linreg.fit(x, y)
+# plot it
+from numpy import linspace,matrix
+xx = linspace(0,1,40)
+plot(x,y,'o',xx,linreg.predict(matrix(xx).T),'--r')
+show()
+# quantify the mean squared error
+from sklearn.metrics import mean_squared_error
+print mean_squared_error(linreg.predict(x),y)
