@@ -107,3 +107,7 @@ show()
 # quantify the mean squared error
 from sklearn.metrics import mean_squared_error
 print mean_squared_error(linreg.predict(x),y)
+# correlation
+from numpy import corrcoef
+corr = corrcoef(data.T) # .T gives the transpose
+print corr
