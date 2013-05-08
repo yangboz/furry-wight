@@ -111,3 +111,12 @@ print mean_squared_error(linreg.predict(x),y)
 from numpy import corrcoef
 corr = corrcoef(data.T) # .T gives the transpose
 print corr
+# visualize the correlation maxtrix
+from pylab import pcolor,colorbar,xticks,yticks
+from numpy import arange
+pcolor(corr)
+colorbar()#add
+#arranging the names of the variables on the axis
+xticks(arange(0.5,4.5),['sepal length','sepal width','petal length','petal width'],rotation=-20)
+yticks(arange(0.5,4.5),['sepal length', 'sepal width', 'petal length', 'petal width'],rotation=-20)
+show()
