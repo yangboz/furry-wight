@@ -111,7 +111,7 @@ print mean_squared_error(linreg.predict(x),y)
 from numpy import corrcoef
 corr = corrcoef(data.T) # .T gives the transpose
 print corr
-# visualize the correlation maxtrix
+# visualize the correlation matrix
 from pylab import pcolor,colorbar,xticks,yticks
 from numpy import arange
 pcolor(corr)
@@ -120,3 +120,27 @@ colorbar()#add
 xticks(arange(0.5,4.5),['sepal length','sepal width','petal length','petal width'],rotation=-20)
 yticks(arange(0.5,4.5),['sepal length', 'sepal width', 'petal length', 'petal width'],rotation=-20)
 show()
+# dimensionality reduction(Principal Component Analysis)
+from sklearn.decomposition import PCA
+pca = PCA(n_components=2)
+# fit transform
+pcad = pca.fit_transform(data)
+# plot it
+plot(pcad[target=='setosa',0],pcad[target=='setosa',1],'bo')
+plot(pcad[target=='versicolor',0],pcad[target=='versicolor',1],'ro')
+plot(pcad[target=='virginica',0],pcad[target=='virginica',1],'go')
+show()
+# variance ratio
+print pca.explained_variance_ratio_
+# lost informations
+print 1-sum(pca.explained_variance_ratio_)
+# data reverse
+data_inv = pca.inverse_transform(pcad)
+# estimate the result of inverse
+print abs(sum(sum(data - data_inv)))
+# varying the number of PCAs
+for i in range(1,5):
+    pca = PCA(n_components=i)
+    pca.fit(data)
+    print sum(pca.explained_variance_ratio_) * 100, '%'
+# dimension reduction
