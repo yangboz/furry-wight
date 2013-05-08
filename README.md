@@ -33,3 +33,13 @@ Snapshots
 ===========
 
 ![Screenshot of "dot_plot_of_specise"](https://raw.github.com/yangboz/furry-wight/master/snapshots/dot_plot_of_specise.jpg)
+
+![Screenshot of "histgram_plot_of_specise"](https://raw.github.com/yangboz/furry-wight/master/snapshots/histgram_plot_of_specise.jpg)
+
+![Screenshot of "dot_plot_compare_of_specise"](https://raw.github.com/yangboz/furry-wight/master/snapshots/dot_plot_compare_of_specise.jpg)
+
+![Screenshot of "dot_plot_PCA_of_specise"](https://raw.github.com/yangboz/furry-wight/master/snapshots/dot_plot_PCA_of_specise.jpg)
+
+![Screenshot of "colorbar_plot_correlation"](https://raw.github.com/yangboz/furry-wight/master/snapshots/colorbar_plot_correlation.jpg)
+
+![Screenshot of "dot_plot_evaluate_specise"](https://raw.github.com/yangboz/furry-wight/master/snapshots/dot_plot_evaluate_specise.jpg)
