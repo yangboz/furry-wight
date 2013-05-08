@@ -28,3 +28,8 @@ correlation measures
 and visualize the information it brings
 
 • Analyze structured data
+
+Snapshots
+===========
+
+![Screenshot of "dot_plot_of_specise"](https://raw.github.com/yangboz/furry-wight/master/snapshots/dot_plot_of_specise.jpg)
